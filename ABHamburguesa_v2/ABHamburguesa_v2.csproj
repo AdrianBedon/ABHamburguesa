@@ -54,10 +54,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="ABViews\BurguerItemPage.xaml">
+	  <Compile Update="ABViews\ABBurguerItemPage.xaml.cs">
+	    <DependentUpon>ABBurguerItemPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="ABViews\ABBurguerListPage.xaml.cs">
+	    <DependentUpon>ABBurguerListPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="ABViews\ABBurguerItemPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ABViews\BurguerListPage.xaml">
+	  <MauiXaml Update="ABViews\ABBurguerListPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
