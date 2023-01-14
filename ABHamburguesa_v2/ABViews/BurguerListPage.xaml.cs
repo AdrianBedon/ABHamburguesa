@@ -25,5 +25,29 @@ public partial class BurguerListPage : ContentPage
 		await Shell.Current.GoToAsync(nameof(BurguerItemPage));
     }
 
-    
+    private async void burguersCollection_SelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (e.CurrentSelection.Count != 0)
+        {
+            var burguer = (ABModels.ABBurguer)e.CurrentSelection[0];
+
+            string action = await DisplayActionSheet("Seleccione la acción que desea realizar:", "Cancel", null, "Editar", "Borrar");
+
+            if (action == "Editar")
+            {
+                await Shell.Current.GoToAsync($"{nameof(BurguerItemPage)}?{nameof(BurguerItemPage.ItemId)}={burguer.ID}");
+            }
+            else if (action == "Borrar")
+            {
+                App.BurguerRepo.DeleteBurguer(burguer);
+                LoadData();
+            }
+            else
+            {
+                LoadData();
+            }
+
+            ABburguerList.SelectedItem = null;
+        }
+    }
 }
