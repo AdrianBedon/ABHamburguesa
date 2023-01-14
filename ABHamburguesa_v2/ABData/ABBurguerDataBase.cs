@@ -34,19 +34,7 @@ namespace ABHamburguesa_v2.ABData
             return result;
         }
 
-        public int UpadateBurguer(ABBurguer burguer)
-        {
-            Init();
-            int result = conn.Update(burguer);
-            return result;
-        }
-
-        public int DeleteBurguer(ABBurguer burguer)
-        {
-            Init();
-            int result = conn.Delete(burguer);
-            return result;
-        }
+        
 
         public List<ABBurguer> GetAllBurguers()
         {
