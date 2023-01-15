@@ -35,7 +35,7 @@ public partial class BurguerListPage : ContentPage
 
             if (action == "Editar")
             {
-                await Shell.Current.GoToAsync($"{nameof(BurguerItemPage)}?{nameof(BurguerItemPage.ItemId)}={burguer.ID}");
+                await Shell.Current.GoToAsync($"{nameof(BurguerItemPage)}?{nameof(BurguerItemPage.ABItemId)}={burguer.ID}");
             }
             else if (action == "Borrar")
             {

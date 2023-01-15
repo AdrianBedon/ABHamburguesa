@@ -2,18 +2,18 @@ using ABHamburguesa_v2.ABModels;
 
 namespace ABHamburguesa_v2.ABViews;
 
-[QueryProperty(nameof(ItemId),nameof(ItemId))]
+[QueryProperty(nameof(ABItemId),nameof(ABItemId))]
 public partial class BurguerItemPage : ContentPage
 {
-    ABBurguer Item = new ABBurguer();
-    bool _flag;
+    ABBurguer ABItem = new ABBurguer();
+    bool _ABflag;
 	public BurguerItemPage()
 	{
 		InitializeComponent();
         LoadBurguer();
 	}
 
-    public int ItemId
+    public int ABItemId
     {
         set { LoadBurguer(value); }
     }
@@ -22,31 +22,31 @@ public partial class BurguerItemPage : ContentPage
     {
         if (value > -1)
         {
-            Item = App.BurguerRepo.GetBurguer(value);
+            ABItem = App.BurguerRepo.GetBurguer(value);
             SaveButton.Text = "Editar";
         }
         
-        BindingContext = Item;
+        BindingContext = ABItem;
 
     }
 
     private void ABCheck_CheckedChanged(object sender, CheckedChangedEventArgs e)
     {
-        _flag = e.Value;
+        _ABflag = e.Value;
     }
 
     private void OnSavedClicked(object sender, EventArgs e)
     {
-        Item.Name = ABNameB.Text;
-        Item.Description = ABDescB.Text;
-        Item.WithExtraCheese = _flag;
+        ABItem.Name = ABNameB.Text;
+        ABItem.Description = ABDescB.Text;
+        ABItem.WithExtraCheese = _ABflag;
         if (SaveButton.Text == "Editar")
         {
-            App.BurguerRepo.UpadateBurguer(Item);
+            App.BurguerRepo.UpadateBurguer(ABItem);
         }
         else
         {
-            App.BurguerRepo.AddNewBurguer(Item);
+            App.BurguerRepo.AddNewBurguer(ABItem);
         }
         Shell.Current.GoToAsync("..");
     }
