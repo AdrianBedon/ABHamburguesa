@@ -37,9 +37,9 @@ public partial class BurguerItemPage : ContentPage
 
     private void OnSavedClicked(object sender, EventArgs e)
     {
-        ABItem.Name = ABNameB.Text;
-        ABItem.Description = ABDescB.Text;
-        ABItem.WithExtraCheese = _ABflag;
+        ABItem.ABName = ABNameB.Text;
+        ABItem.ABDescription = ABDescB.Text;
+        ABItem.ABWithExtraCheese = _ABflag;
         if (SaveButton.Text == "Editar")
         {
             App.BurguerRepo.UpadateBurguer(ABItem);

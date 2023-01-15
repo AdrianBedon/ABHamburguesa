@@ -19,8 +19,8 @@
                                HorizontalOptions="Center"
                                VerticalOptions="Center"/>
                         <StackLayout Grid.Column="1">
-                            <Label Text="{Binding Name}" FontAttributes="Bold"/>
-                            <Label Text="{Binding Description}" TextColor="Gray" FontAttributes="Italic"/>
+                            <Label Text="{Binding ABName}" FontAttributes="Bold"/>
+                            <Label Text="{Binding ABDescription}" TextColor="Gray" FontAttributes="Italic"/>
                         </StackLayout>
                     </Grid>
                 </DataTemplate>

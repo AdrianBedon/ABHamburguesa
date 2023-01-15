@@ -9,14 +9,14 @@
                              Spacing="10"
                              VerticalOptions="StartAndExpand">
             <Label Text="Nombre"/>
-            <Entry x:Name="ABNameB" Text="{Binding Name}"/>
+            <Entry x:Name="ABNameB" Text="{Binding ABName}"/>
 
             <Label Text="Descripción"/>
-            <Entry x:Name="ABDescB" Text="{Binding Description}"/>
+            <Entry x:Name="ABDescB" Text="{Binding ABDescription}"/>
 
             <Label Text="¿Con queso extra?"/>
             <CheckBox x:Name="ABCheck"
-                      IsChecked="{Binding WithExtraCheese}"
+                      IsChecked="{Binding ABWithExtraCheese}"
                       CheckedChanged="ABCheck_CheckedChanged"/>
 
             <Button x:Name ="SaveButton"

@@ -14,8 +14,8 @@ namespace ABHamburguesa_v2.ABModels
         public int ID { get; set; }
 
         [MaxLength(250),Unique]
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public bool WithExtraCheese { get; set; }
+        public string ABName { get; set; }
+        public string ABDescription { get; set; }
+        public bool ABWithExtraCheese { get; set; }
     }
 }
