@@ -1,4 +1,5 @@
 using ABHamburguesa_v2.ABModels;
+using static Android.InputMethodServices.Keyboard;
 
 namespace ABHamburguesa_v2.ABViews;
 
@@ -11,7 +12,7 @@ public partial class BurguerItemPage : ContentPage
 	{
 		InitializeComponent();
         LoadBurguer();
-	}
+    }
 
     public int ABItemId
     {
@@ -24,6 +25,7 @@ public partial class BurguerItemPage : ContentPage
         {
             ABItem = App.BurguerRepo.GetBurguer(value);
             SaveButton.Text = "Editar";
+            
         }
         
         BindingContext = ABItem;
@@ -40,6 +42,7 @@ public partial class BurguerItemPage : ContentPage
         ABItem.ABName = ABNameB.Text;
         ABItem.ABDescription = ABDescB.Text;
         ABItem.ABWithExtraCheese = _ABflag;
+        ABItem.ABDate = DateTime.ParseExact(ABFecha.Text, "dd/MM/yyyy HH:mm:ss", null);
         if (SaveButton.Text == "Editar")
         {
             App.BurguerRepo.UpadateBurguer(ABItem);

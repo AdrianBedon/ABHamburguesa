@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:models="clr-namespace:ABHamburguesa_v2.ABModels"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:viewmodels = "clr-namespace:ABHamburguesa_v2.ABViewModels"
              x:Class="ABHamburguesa_v2.ABViews.BurguerItemPage"
              Title="BurguerItemPage">
     <ScrollView>
@@ -18,6 +20,11 @@
             <CheckBox x:Name="ABCheck"
                       IsChecked="{Binding ABWithExtraCheese}"
                       CheckedChanged="ABCheck_CheckedChanged"/>
+
+            <Label Text="Fecha:"/>
+            <Label x:Name="ABFecha"
+                   Text ="{Binding DateTime, StringFormat='{0:dd/MM/yyyy HH:mm:ss}'}"
+                   BindingContext="{viewmodels:ABDateViewModel}"/>
 
             <Button x:Name ="SaveButton"
                     Text ="Guardar"

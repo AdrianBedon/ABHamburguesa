@@ -17,5 +17,7 @@ namespace ABHamburguesa_v2.ABModels
         public string ABName { get; set; }
         public string ABDescription { get; set; }
         public bool ABWithExtraCheese { get; set; }
+
+        public DateTime ABDate { get; set; }
     }
 }
