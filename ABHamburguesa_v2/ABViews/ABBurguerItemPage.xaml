@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:models="clr-namespace:ABHamburguesa_v2.ABModels"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:viewmodels = "clr-namespace:ABHamburguesa_v2.ABViewModels"
              x:Class="ABHamburguesa_v2.ABViews.BurguerItemPage"

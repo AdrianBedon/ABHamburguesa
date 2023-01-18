@@ -21,6 +21,7 @@
                         <StackLayout Grid.Column="1">
                             <Label Text="{Binding ABName}" FontAttributes="Bold"/>
                             <Label Text="{Binding ABDescription}" TextColor="Gray" FontAttributes="Italic"/>
+                            <Label Text="{Binding ABDate}" TextColor="Gray" FontAttributes="Italic"/>
                         </StackLayout>
                     </Grid>
                 </DataTemplate>
